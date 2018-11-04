@@ -2,7 +2,7 @@
 
 Event-Sourced Autonomous Services Toolkit.
 
-## See one of the platform-specific implementations of Eventide
+## Platform-Specific implementations of Eventide
 
 **Postgres**
 
