@@ -1,6 +1,6 @@
 # Eventide
 
-Event-Sourced Autonomous Services Toolkit.
+Event-Sourced Autonomous Services Toolkit
 
 ## Platform-Specific implementations of Eventide
 
