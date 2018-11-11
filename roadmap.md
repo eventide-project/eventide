@@ -1,5 +1,8 @@
 # Eventide Roadmap
 
+
+- [ ] Improvements and standardization to class descriptions in user guide
+- [ ] EntityQuery library, and EntityStore leverage of EntityQuery (query branch in account-basics)
 - [ ] Fixtures
 - [ ] Misc property bag in metadata
 - [ ] Harmonize command line tools
