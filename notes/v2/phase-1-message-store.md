@@ -2,7 +2,7 @@
 
 - Reader termination condition should be based on batch size [https://github.com/eventide-project/message-store/issues/5](https://github.com/eventide-project/message-store/issues/5)
 
-- Review tests. Re-familiarize. Consider a test framework.
+- Review message-store-postgres-database tests. Re-familiarize. Consider a test framework. Improve testing and testability in preparation for the database to be completely free of Ruby.
 
 - Rename server function parameters to natural names [https://github.com/eventide-project/message-store-postgres-database/issues/11](https://github.com/eventide-project/message-store-phttps://github.com/eventide-project/message-store-postgres-database/issues/5ostgres-database/issues/11)
 
