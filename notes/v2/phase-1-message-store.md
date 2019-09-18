@@ -2,7 +2,7 @@
 
 - Reader termination condition should be based on batch size [https://github.com/eventide-project/message-store/issues/5](https://github.com/eventide-project/message-store/issues/5)
 
-- Review tests
+- Review tests. Re-familiarize. Consider a test framework.
 
 - Rename server function parameters to natural names [https://github.com/eventide-project/message-store-postgres-database/issues/11](https://github.com/eventide-project/message-store-phttps://github.com/eventide-project/message-store-postgres-database/issues/5ostgres-database/issues/11)
 
