@@ -11,6 +11,7 @@
 - The messages_stream_name_position_uniq_idx is removed and replaced with the messages_stream_name_position_correlation_uniq_idx
 - The messages_category_global_position_idx is removed and replaced with the messages_category_global_position_correlation_idx
 - The retrieval server functions, `get_stream_messages` and `get_category_messages`, support pub/sub directly by receiving a `correlation` argument and composing the correlation metadata query condition directly in the server function (http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream)
+- The `get_category_messages` server function supports consumer groups via the `consumer_group_member` and `consumer_group_size` parameters (http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-category)
 - The retrieval server functions provide debugging output that is activated via the Postgres setting, `message_store.debug_get` (http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output)
 - The write server function provides debugging output that is activated via the Postgres setting, `message_store.debug_write`
 - The `message_store.debug` Postgres setting activates both the retrieval and write debug output
