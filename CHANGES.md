@@ -27,6 +27,8 @@
 - Stream name utilities now support stream name with compound IDs ([http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name](http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name))
 - Cardinal IDs are formalized as part of the stream name utilities ([http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name](http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name))
 - Concrete `Get::Category` and `Get::Stream` classes can be constructed, configured, and used directly without using the abstract `Get` factory
+- Correlation is supported exclusively by the `Get::Category` implementation
+- Consumer groups are supported exclusively by the `Get::Category` implementation
 - Correlation error raised by the message store database is caught, coerced to `MessageStore::Correlation::Error` and re-raised by the `Get` class
 
 ## Messaging
