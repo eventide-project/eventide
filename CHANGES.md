@@ -2,6 +2,9 @@
 
 ### 2.0.0.0
 
+-- in general, simplification; removal of features that support scenarios that are theoretical but not practical in the wild
+
+
 ## Postgres Message Store
 
 - The `get_category_messages` server function supports pub/sub directly by receiving a `correlation` argument and composing the correlation metadata query condition directly in the server function ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream))
@@ -23,6 +26,7 @@
 - MessageStore::Postgres::Get receives the `consumer_group_member` and `consumer_group_size` arguments and passes it to the message store database's retrieval functions ([http://docs.eventide-project.org/user-guide/retrieving/batch.html#consumer-groups](http://docs.eventide-project.org/user-guide/retrieving/batch.html#consumer-groups))
 - Stream name utilities now support stream name with compound IDs ([http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name](http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name))
 - Cardinal IDs are formalized as part of the stream name utilities ([http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name](http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name))
+- Concrete `Get::Category` and `Get::Stream` classes can be constructed, configured, and used directly without using the abstract `Get` factory
 - Correlation error raised by the message store database is caught, coerced to `MessageStore::Correlation::Error` and re-raised by the `Get` class
 
 ## Messaging
