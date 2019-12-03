@@ -2,28 +2,37 @@
 
 ### 2.0.0.0
 
--- in general, simplification; removal of features that support scenarios that are theoretical but not practical in the wild
-
-
 ## Postgres Message Store
 
-- The `get_category_messages` server function supports pub/sub directly by receiving a `correlation` argument and composing the correlation metadata query condition directly in the server function ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream))
-- The `get_category_messages` server function supports consumer groups via the `consumer_group_member` and `consumer_group_size` parameters ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-category](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-category))
+- This library is deprecated. It is now called `message-db` and has its own org on GitHub: [https://github.com/message-db/message-db](https://github.com/message-db/message-db).
+
+## Message DB
+
+- Formally, `postgres-message-store` (see above).
+- Note: There are no changes to the `messages' table, and no data migration is necessary
+- [breaking change] The `get_category_messages` server function supports pub/sub directly by receiving a `correlation` argument and composing the correlation metadata query condition directly in the server function ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream))
+- [breaking change] The `get_category_messages` server function supports consumer groups via the `consumer_group_member` and `consumer_group_size` parameters ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-category](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-category))
 - The retrieval server functions provide debugging output that is activated via the Postgres setting, `message_store.debug_get` ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output))
 - The write server function provides debugging output that is activated via the Postgres setting, `message_store.debug_write` ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output))
 - The `message_store.debug` Postgres setting activates both the retrieval and write debug output ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output))
 - `id` stream parsing function ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-the-id-from-a-stream-name](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-the-id-from-a-stream-name))
 - `cardinal_id` stream parsing function ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-the-cardinal-id-from-a-stream-name](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-the-cardinal-id-from-a-stream-name))
 - Database management tool output is clarified
-- All server function parameter names are no longer named with underscore prefixes ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html](http://docs.eventide-project.org/user-guide/message-store/server-functions.html))
+- [breaking change] All server function parameter names are no longer named with underscore prefixes ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html](http://docs.eventide-project.org/user-guide/message-store/server-functions.html))
 - Indexes are no longer built with the `CONCURRENTLY` option ([http://docs.eventide-project.org/user-guide/message-store/anatomy.html#source-code](http://docs.eventide-project.org/user-guide/message-store/anatomy.html#source-code))
-- The messages_category_global_position_idx is removed and replaced with the messages_category_global_position_correlation_idx, which includes correlation metadata
+- [breaking change] The `messages_category_global_position_idx` is removed and replaced with the `messages_category` index, which now indexes correlation metadata
+- [breaking change] The `messages_stream_name_position_uniq_idx` is removed and replaced with the `messages_stream` index, which now indexes correlation metadata
+- [breaking change] The `messages_id_uniq_idx` is removed and replaced with the `messages_id` index
+
+- ... (ruby gems)
+- ... (npm module)
+
 - Improvements to interactive tests ([https://github.com/eventide-project/postgres-message-store/tree/master/test](https://github.com/eventide-project/postgres-message-store/tree/master/test))
 
 ## Message Store Client
 
-- MessageStore::Postgres::Get receives the `correlation` argument and passes it to the message store database's retrieval functions ([http://docs.eventide-project.org/user-guide/retrieving/batch.html#retrieving-correlated-messages](http://docs.eventide-project.org/user-guide/retrieving/batch.html#retrieving-correlated-messages))
-- MessageStore::Postgres::Get receives the `consumer_group_member` and `consumer_group_size` arguments and passes it to the message store database's retrieval functions ([http://docs.eventide-project.org/user-guide/retrieving/batch.html#consumer-groups](http://docs.eventide-project.org/user-guide/retrieving/batch.html#consumer-groups))
+- `MessageStore::Postgres::Get` receives the `correlation` argument and passes it to the message store database's retrieval functions ([http://docs.eventide-project.org/user-guide/retrieving/batch.html#retrieving-correlated-messages](http://docs.eventide-project.org/user-guide/retrieving/batch.html#retrieving-correlated-messages))
+- `MessageStore::Postgres::Get` receives the `consumer_group_member` and `consumer_group_size` arguments and passes it to the message store database's retrieval functions ([http://docs.eventide-project.org/user-guide/retrieving/batch.html#consumer-groups](http://docs.eventide-project.org/user-guide/retrieving/batch.html#consumer-groups))
 - Stream name utilities now support stream name with compound IDs ([http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name](http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name))
 - Cardinal IDs are formalized as part of the stream name utilities ([http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name](http://docs.eventide-project.org/user-guide/stream-names/message-store-stream-name.html#stream-name))
 - Concrete `Get::Category` and `Get::Stream` classes can be constructed, configured, and used directly without using the abstract `Get` factory
@@ -37,12 +46,12 @@
 
 ## Consumer
 
-- Entity stream names are no longer supported by consumers ([http://docs.eventide-project.org/user-guide/consumers.html](http://docs.eventide-project.org/user-guide/consumers.html))
-- Correlation query conditions are no longer composed in the consumer and passed to the message store database server functions
-- Consumer group query conditions are no longer composed in the consumer and passed to the message store database server functions
+- [breaking change] Entity stream names are no longer supported by consumers ([http://docs.eventide-project.org/user-guide/consumers.html](http://docs.eventide-project.org/user-guide/consumers.html))
+- Correlation query conditions are no longer composed in the consumer and passed to the message store database server functions. The message store database composes the correlation query conditions within its server functions.
+- Consumer group query conditions are no longer composed in the consumer and passed to the message store database server functions. The message store database composes the correlation query conditions within its server functions.
 
 ## Documentation
 
-- The `MessageStore::Postgres::Get` class is documented ([http://docs.eventide-project.org/user-guide/retrieving/batch.html](http://docs.eventide-project.org/user-guide/retrieving/batch.html))
+- The `MessageStore::Postgres::Get` module is documented ([http://docs.eventide-project.org/user-guide/retrieving/batch.html](http://docs.eventide-project.org/user-guide/retrieving/batch.html))
 - Debugging output for the Postgres server functions is documented ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output))
 - The settings file location override is documented ([http://docs.eventide-project.org/user-guide/session.html#overriding-the-setting-file-location](http://docs.eventide-project.org/user-guide/session.html#overriding-the-setting-file-location))
