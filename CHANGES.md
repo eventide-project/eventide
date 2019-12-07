@@ -9,7 +9,8 @@
 ## Message DB
 
 - Formally, `postgres-message-store` (see above).
-- Note: There are no changes to the `messages' table, and no data migration is necessary
+- **Note: There are no changes to the `messages' table, and no data migration is necessary**
+- The executables named `evt-pg-*` are renamed to `mdb-`
 - [breaking change] The `get_category_messages` server function supports pub/sub directly by receiving a `correlation` argument and composing the correlation metadata query condition directly in the server function ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-stream))
 - [breaking change] The message_store database and its objects are contained in a Postgres schema named `message_store`
 - [breaking change] The `get_category_messages` server function supports consumer groups via the `consumer_group_member` and `consumer_group_size` parameters ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-category](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#get-messages-from-a-category))
