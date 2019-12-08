@@ -26,10 +26,8 @@
 - [breaking change] The `messages_category_global_position_idx` is removed and replaced with the `messages_category` index, which now indexes correlation metadata
 - [breaking change] The `messages_stream_name_position_uniq_idx` is removed and replaced with the `messages_stream` index, which now indexes correlation metadata
 - [breaking change] The `messages_id_uniq_idx` is removed and replaced with the `messages_id` index
-
-- ... (ruby gems)
-- ... (npm module)
-
+- Message DB RubyGem: [https://github.com/message-db/ruby-gem](https://github.com/message-db/ruby-gem)
+- Message DB NPM Module: [https://github.com/message-db/npm-module](https://github.com/message-db/npm-module)
 - Improvements to interactive tests ([https://github.com/eventide-project/postgres-message-store/tree/master/test](https://github.com/eventide-project/postgres-message-store/tree/master/test))
 
 ## Message Store Client
