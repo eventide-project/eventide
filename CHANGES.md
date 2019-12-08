@@ -40,7 +40,6 @@
 - Concrete `Get::Category` and `Get::Stream` classes can be constructed, configured, and used directly without using the abstract `Get` factory
 - Correlation is supported exclusively by the `Get::Category` implementation
 - Consumer groups are supported exclusively by the `Get::Category` implementation
-- Correlation error raised by the message store database is caught, coerced to `MessageStore::Correlation::Error` and re-raised by the `Get` class
 
 ## Messaging
 
