@@ -4,7 +4,9 @@
 
 ## Postgres Message Store
 
-- This library is deprecated. It is now called `message-db` and has its own org on GitHub: [https://github.com/message-db/message-db](https://github.com/message-db/message-db).
+- This library is deprecated. It's replaced with Message DB:
+
+[https://github.com/message-db/message-db](https://github.com/message-db/message-db)
 
 ## Message DB
 
