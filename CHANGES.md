@@ -58,5 +58,5 @@
 - The `MessageStore::Postgres::Get` module is documented ([http://docs.eventide-project.org/user-guide/retrieving/batch.html](http://docs.eventide-project.org/user-guide/retrieving/batch.html))
 - Debugging output for the Postgres server functions is documented ([http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output](http://docs.eventide-project.org/user-guide/message-store/server-functions.html#debugging-output))
 - Stream name utilities documentation is updated and improved: [http://docs.eventide-project.org/user-guide/stream-names](http://docs.eventide-project.org/user-guide/stream-names/)
-- Consumer user guide is improved and is more consistent with `MessageStore::Postgres::Get` documentation: [http://docs.eventide-project.org/user-guide/consumers](http://docs.eventide-project.org/user-guide/consumers/)
+- Consumer user guide is improved and is more consistent with `MessageStore::Postgres::Get` documentation: [http://docs.eventide-project.org/user-guide/consumers.html](http://docs.eventide-project.org/user-guide/consumers.html)
 - The settings file location override is documented ([http://docs.eventide-project.org/user-guide/session.html#overriding-the-setting-file-location](http://docs.eventide-project.org/user-guide/session.html#overriding-the-setting-file-location))
