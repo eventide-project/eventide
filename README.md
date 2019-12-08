@@ -1,7 +1,6 @@
 # Eventide
 
-[!https://github.com/eventide-project/eventide/blob/master/eventide.png]
-<img source=https://github.com/eventide-project/eventide/blob/master/eventide.png></img>
+<img src="/eventide-project/eventide/blob/master/eventide.png?raw=true" alt="eventide.png">
 
 Pub/Sub, event sourcing, evented microservices, and message-based applications toolkit built for the [Message DB](https://github.com/message-db/message-db) back end.
 
