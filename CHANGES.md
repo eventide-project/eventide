@@ -2,6 +2,10 @@
 
 ### 2.0.0.0
 
+WARNING:
+
+The Eventide v2 code is incompatible with a v1 message store database. Don't update the Eventide toolkit code until you're ready to update your message store database.
+
 ## Postgres Message Store
 
 - This library is deprecated. It's replaced with Message DB: [https://github.com/message-db/message-db](https://github.com/message-db/message-db)
