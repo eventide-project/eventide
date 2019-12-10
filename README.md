@@ -1,4 +1,4 @@
-![Message DB](http://docs.eventide-project.org/eventide-icon-80.png)
+![Message DB](http://docs.eventide-project.org/eventide-icon-100.png)
 
 # Eventide
 
