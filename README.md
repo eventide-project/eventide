@@ -1,3 +1,5 @@
+![Message DB](http://docs.eventide-project.org/eventide-icon-132.png)
+
 # Eventide
 
 Pub/Sub, event sourcing, evented microservices, and message-based applications toolkit built for the [Message DB](https://github.com/message-db/message-db) back end.
