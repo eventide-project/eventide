@@ -2,9 +2,15 @@
 
 ### 2.0.0.0
 
+December 2019
+
 WARNING:
 
 The Eventide v2 code is incompatible with a v1 message store database. Don't update the Eventide toolkit code until you're ready to update your message store database.
+
+## Test Bench
+
+All tests in the v2 stack have been ported and updated to the new version of [Test Bench](https://github.com/test-bench/test-bench) released in October, 2019.
 
 ## Postgres Message Store
 
