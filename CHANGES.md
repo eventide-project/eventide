@@ -18,7 +18,7 @@ All tests in the v2 stack have been ported and updated to the new version of [Te
 
 ## Message DB
 
-- Formally, `postgres-message-store` (see above).
+- Formerly, `postgres-message-store` (see above).
 - **Note: There are no changes to the `messages` table, and no data migration is necessary**
 - **An update tool is provided to make the structural upgrades to the database**
 - The executables named `evt-pg-*` are renamed to `mdb-*`
