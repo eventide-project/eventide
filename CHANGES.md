@@ -1,5 +1,18 @@
 # Eventide Changes
 
+### 2.0.1.0
+
+Wed Oct 12 2022
+
+Updates to the message_store and message_store-postgres libraries to support Message DB [v1.3.0](https://github.com/message-db/message-db/releases/tag/v1.3.0).
+
+The message_store-postgres library’s Get::Stream::Last class’s actuator supports an optional parameter named `type`. This is in addition to the `stream_name` parameter that has always been part of the Get::Stream::Last actuator’s signature.
+
+Libraries affected:
+
+- message-store (v2.3.2.0)
+- message-store-postgres (v2.4.4.0)
+
 ### 2.0.0.0
 
 December 2019
