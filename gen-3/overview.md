@@ -1,2 +1,2 @@
-# Eventide Project Gen 3
+# Eventide Gen 3 Overview
 
