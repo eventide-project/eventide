@@ -23,6 +23,8 @@
 
 ## Fri Jan 5 2024
 
+- [people] Nathan, Scott
+
 - Start of work planning for gen 3
 
 - Bitly shortcut for issues list
@@ -47,5 +49,3 @@
   - Significant change to a library or set of interdependent libraries
 
 - Recorded new issues for refit of protocol discovery and reflection
-
-- [people] Nathan, Scott
