@@ -21,6 +21,9 @@
 
 - Notified community of Gen 3 work start
 
+- [people] Nathan
+  - Normalized the milestones for our repos in GitHub
+
 ## Fri Jan 5 2024
 
 - [people] Nathan, Scott
