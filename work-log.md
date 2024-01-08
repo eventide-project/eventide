@@ -23,6 +23,12 @@
 
 - [people] Nathan
   - Normalized the milestones for our repos in GitHub
+  - Milestones that were called e.g. v2+ were renamed to Gen 2+, and their issues have been carried over
+  - Descriptions are all blank, although they can be set later if needed
+  - All milestones are "open" rather than "closed" at the moment, since that reflects the prior reality
+  - Unfortunately, there doesn't appear to be a way to order milestones in GitHub
+    - By observation, GitHub orders milestones by the time that a milestone was first created
+    - Once past milestones are closed, GitHub's ordering won't be an issue
 
 ## Fri Jan 5 2024
 
