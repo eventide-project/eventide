@@ -1,5 +1,14 @@
 # Eventide Project Work Log
 
+## Sun Jan 14 2024
+
+- [people] Nathan
+
+- Supplant Bundler via a new gem installation script that just uses Rubygems directly
+  - Finished implementation of the install-gems.sh script
+  - [setback] Needed to determine the root cause of surprising behavior of the `gem cleanup` command
+  - As a result of the setback, didn't complete the task
+
 ## Sun Jan 7 2024
 
 - [people] Nathan, Scott
