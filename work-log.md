@@ -1,5 +1,12 @@
 # Eventide Project Work Log
 
+## Mon Jan 15 2024
+
+- [people] Ethan, Scott
+
+- Discussion of idempotence content
+  - Basic sequencing of article or series of articles
+
 ## Sun Jan 14 2024
 
 - [people] Nathan
